@@ -7,6 +7,9 @@
             "email": "jasonwang@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {"Conf\\": "src"}
+    },
     "minimum-stability": "dev",
     "require": {}
 }

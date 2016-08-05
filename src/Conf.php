@@ -24,7 +24,7 @@ class Conf
 
             if (is_a($iniConfig, 'Yaf\Config\Ini')) {
                 $mixedConfig = $iniConfig->get($key);
-                if (is_a($mixedConfig->toArray())) {
+                if (is_a($mixedConfig->toArray(), 'Yaf\Config\Ini')) {
                     return $mixedConfig;
                 }
             } else {
