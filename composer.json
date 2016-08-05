@@ -1,0 +1,12 @@
+{
+    "name": "jaasonwang/jconf",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jason Wang",
+            "email": "jasonwang@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
