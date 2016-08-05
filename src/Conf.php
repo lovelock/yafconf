@@ -7,8 +7,7 @@
  * Time: 下午11:17
  */
 
-namespace Jconf;
-
+namespace Conf;
 use Yaf\Config\Ini;
 
 class Conf
