@@ -16,7 +16,16 @@ class Conf
     {
         list($filename, $key) = explode('.', $dottedKey, 2);
 
-        //todo CONF_PATH may not be defined
+        if (!defined('CONF_PATH')) {
+            if (is_dir(APPLICATION_PATH . '/conf')) {
+                define('CONF_PATH', APPLICATION_PATH . '/conf');
+            } else if (is_dir(APPLICATION_PATH . '/../conf')) {
+                define('CONF_PATH', APPLICATION_PATH . '/../conf');
+            } else {
+                throw new Exception('No configuration directory is found');
+            }
+        }
+
         $filename = CONF_PATH . '/' . $filename . '.ini';
         if (is_file($filename) && is_readable($filename)) {
             $iniConfig = new Ini($filename, APP_ENV);
@@ -36,3 +45,4 @@ class Conf
         }
     }
 }
+
