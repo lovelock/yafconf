@@ -39,11 +39,9 @@ If you don't like composer, you can require it from your local directory as well
 This project relies on two global constants
 
 1. `CONF_PATH`
-
 This tells Conf where to find the .ini files.
 
 2. `APP_ENV`
-
 This tells Conf what directives to find in .ini files.
 
 ### Api
