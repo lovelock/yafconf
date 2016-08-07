@@ -1,10 +1,10 @@
 {
-    "name": "lovelock/konf",
+    "name": "lovelock/yafconf",
     "license": "MIT",
     "authors": [
         {
-            "name": "Jason Wang",
-            "email": "jasonwang@gmail.com"
+            "name": "Frost Wong",
+            "email": "frostwong@gmail.com"
         }
     ],
     "autoload": {

@@ -27,7 +27,7 @@ class Bootstrap extends Yaf\Bootstrap_Abstract
 
 #### 2. Download it via composer
 
-`composer require lovelock/konf`
+`composer require lovelock/yafconf`
 
 ### 2. Classic way
 
