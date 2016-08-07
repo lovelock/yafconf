@@ -46,7 +46,7 @@ This tells Conf what directives to find in .ini files.
 
 ### Api
 
-1. `Conf::get($key)`  
+#### 1. `Conf::get($key)`
 `$key` **MUST** be `.` seperated. I.E, a dot is used as a seperator of the configuration path and its real key. e.g:
 
 ```php
