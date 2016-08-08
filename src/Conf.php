@@ -12,7 +12,7 @@ use Yaf\Config\Ini;
 
 class Conf
 {
-    public static function get($dottedKey)
+    public static function get($dottedKey, $defaultValue = null)
     {
         list($filename, $key) = explode('.', $dottedKey, 2);
 
@@ -38,10 +38,10 @@ class Conf
                     return $mixedConfig;
                 }
             } else {
-                return null;
+                return $defaultValue;
             }
         } else {
-            return null;
+            return $defaultValue;
         }
     }
 }
