@@ -9,6 +9,7 @@
 
 namespace Conf;
 use Yaf\Config\Ini;
+use SeasLog;
 
 class Conf
 {
@@ -32,10 +33,13 @@ class Conf
 
             if (is_a($iniConfig, 'Yaf\Config\Ini')) {
                 $mixedConfig = $iniConfig->get($key);
+
                 if (is_a($mixedConfig, 'Yaf\Config\Ini')) {
                     return $mixedConfig->toArray();
-                } else {
+                } else if (is_scalar($mixedConfig)) {
                     return $mixedConfig;
+                } else {
+                    return $defaultValue;
                 }
             } else {
                 return $defaultValue;
@@ -45,4 +49,3 @@ class Conf
         }
     }
 }
-
